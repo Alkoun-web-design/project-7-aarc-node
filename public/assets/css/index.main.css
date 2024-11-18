@@ -1,0 +1,511 @@
+:root {
+  --pri:#154575;
+  --sec:#451575;
+  --ter:#751545;
+  --pur: #caccd8;
+  --lightgradientbg: linear-gradient(135deg, rgba(197,226,255,1) 0%, rgba(226,196,255,1) 50%, rgba(255,205,230,1) 100%); 
+  --cloudwhite: #f7f7f7;
+  --coalblack: #2a2a2a;
+  --glassgrey: rgba(255, 255, 255, 0.426);
+  --transwhite: rgba(255, 255, 255, 0.73);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  padding: 0;
+  font-family: 'Raleway';
+  font-weight: 500;
+  color: var(--coalblack);
+}
+
+button {
+  background-color: var(--glassgrey);
+  font-family: 'Raleway';
+  padding: 0.6em 1.2em;
+  border-radius: 2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(115deg, #000000 0%, #00C508 55%, #000000 100%), linear-gradient(115deg, #0057FF 0%, #020077 100%), conic-gradient(from 110deg at -5% 35%, #000000 0deg, #FAFF00 360deg), conic-gradient(from 220deg at 30% 30%, #FF0000 0deg, #0000FF 220deg, #240060 360deg), conic-gradient(from 235deg at 60% 35%, #0089D7 0deg, #0000FF 180deg, #240060 360deg);
+  background-blend-mode: soft-light, soft-light, overlay, screen, normal;
+}
+
+.glass-effect {
+  height: 100%;
+  width: 100%;
+  background: var(--glassgrey);
+  backdrop-filter: blur(6em);
+  -webkit-backdrop-filter: blur(6em);
+}
+
+.center {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  height: 84vh;
+  overflow-y: scroll;
+  scrollbar-color: var(--glassgrey) var(--glassgrey);
+  scrollbar-width: thin;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-flow: row wrap;
+}
+
+.column {
+  flex-flow: column wrap;
+}
+  
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-content: center;
+  align-items: center;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.times-new-roman {
+  font-family: 'Times New Roman', serif;
+}
+
+p.times-new-roman div.times-new-roman {
+  font-size: 1.05em;
+}
+
+header {
+  background-color: var(--glassgrey);
+  align-items: center;
+  justify-content: space-around;
+  backdrop-filter: blur(6em);
+  -webkit-backdrop-filter: blur(6em);
+}
+
+.header-banner {
+  display: block;
+  height: 2.2em;
+  background-color: var(--coalblack);
+  color: var(--cloudwhite);
+  text-align: center;
+}
+
+.header-banner-text {
+  padding-top: 0.3em;
+}
+
+.nav-link {
+  color: var(--coalblack);
+  text-decoration: none;
+  font-size: 0.8em;
+  background: none;
+  border-bottom: 4px solid var(--glassgrey);
+  border-radius: 0.25em;
+  margin: 1em 0;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color:var(--pri);
+  color: var(--cloudwhite);
+}
+
+.nav-link svg {
+  height: 1em;
+  width: 1em;
+  margin: auto auto auto 0.5em;
+}
+
+.dropdown-nav-button {
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.dropdown-nav-button:hover {
+  background-color: var(--pri);
+}
+
+.aarc-logo-header-1 {
+  width: 4.6rem;
+  height: 6.8rem;
+}
+
+.aarc-logo-header-2 {
+  width: 4rem;
+  height: 4.7rem;
+}
+
+.home {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  padding: 6em 0 2em;
+}
+
+.home-button-section {
+  margin: 2em 0;
+}
+
+.home-button {
+  background-color: var(--glassgrey);
+  text-decoration: none;
+  text-align: left;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 0.5em;
+  height: 10em;
+  width: 10em;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.500);
+}
+
+.home-text {
+  display: inline-block;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  cursor: default;
+  user-select: none;
+}
+
+.home-text:hover {
+  color: var(--cloudwhite);
+}
+
+.home-sub-text {
+  display: block;
+  width: 13em;
+  transition: 0.3s;
+  cursor: default;
+  user-select: none;
+}
+
+.home-sub-text:hover {
+  color: var(--cloudwhite);
+}
+
+.join-aarc-button {
+  border: 1px solid var(--pri);
+  color: var(--pri);
+  transition: 0.3s;
+}
+
+.seek-therapy-button {
+  border: 1px solid var(--sec);
+  color: var(--sec);
+  transition: 0.3s;
+}
+
+.workshops-button {
+  border: 1px solid var(--ter);
+  color: var(--ter);
+  transition: 0.3s;  
+}
+
+.join-aarc-button:hover {
+  background-color: var(--pri);
+  color: var(--cloudwhite);
+} 
+
+.seek-therapy-button:hover {
+  background-color: var(--sec);
+  color: var(--cloudwhite);
+}
+
+.workshops-button:hover {
+  background-color: var(--ter);
+  color: var(--cloudwhite);
+}
+
+footer {
+  border-top: 1px solid var(--sec);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  background-color: var(--glassgrey);
+  width: 100%;
+  backdrop-filter: blur(6em);
+  -webkit-backdrop-filter: blur(6em);
+}
+
+.footer-bar {
+  padding: 0.3em 0;
+}
+
+.footer-button {
+  transition: 0.3s;
+  border: none;
+}
+
+.footer-button:hover {
+  background-color: var(--ter);
+  color: var(--cloudwhite);
+}
+
+.footer-link {
+  margin: 0 0.5em;
+  background: none;
+  border: none;
+}
+
+.social-media-icon { 
+  height: 2.25em;
+  width: 2.25em;
+}
+
+.invisible {
+  display: none;
+  opacity: 0;
+}
+
+@media (max-width: 576px) {
+
+    h1, h2, h3, h4, h5 {
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+    }
+    
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    } 
+
+    h5 {
+      font-size: 1rem;
+      line-height: 1rem;
+    } 
+
+    header {
+      height: 4.6em;
+    }
+
+    .nav-link {
+      display: none;
+    }
+
+    .home-sub-text {
+      font-size: 1.2em;
+      margin: 0.1em 0 0 10em;
+    }
+
+    .dropdown-nav-button {
+      display: block;
+    }
+
+    .home-button {
+      padding: 0.5em;
+    }
+
+    section {
+      margin: 10em 0 20em;
+      padding: 1em 0em 3.5em;
+    }
+
+    .footer-text, .footer-button{
+      margin: 0 0.15em;
+      font-size: 0.6em;
+    }
+
+    .aarc-logo-header-1 { 
+      display: none;
+    }
+    
+    .aarc-logo-header-2 {
+      display: flex;
+    }
+
+}
+
+@media (min-width: 576px) {
+
+    h1, h2, h3, h4, h5 {
+      font-weight: 500;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+      line-height: 1rem;
+    } 
+
+    header {
+      height: 4.6em;
+    }
+
+    .home-sub-text {
+      font-size: 1.2em;
+      margin: 0.1em 0 0 11.4em;
+    }
+
+    .nav-link {
+      display: none;
+    }
+
+    .dropdown-nav-button {
+      display: block;
+    }
+
+    section {
+      margin: 10em 0 20em;
+      padding: 1em 0em 3.5em;
+    }
+
+    .footer-text, .footer-button {
+      margin: 0 0.15em;
+      font-size: 0.6em;
+    }
+
+    .aarc-logo-header-1 { 
+      display: none;
+    }
+    
+    .aarc-logo-header-2 {
+      display: flex;
+    }
+    
+}
+  
+@media (min-width: 768px) {
+
+
+    h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    header {
+      height: 6.8em;
+    }
+
+    .home-sub-text {
+      font-size: 1.5em;
+      margin: 0.1em 0 0 10.3em;
+    }
+
+    section {
+      margin: 10em 0 20em;
+      padding: 1em 0 3.5em;
+    }
+                    
+    .footer-text, .footer-button{
+      font-size: 0.8em;
+    }
+
+    .aarc-logo-header-1 { 
+      display: flex;
+    }
+    
+    .aarc-logo-header-2 {
+      display: none;
+    }
+
+}
+  
+@media (min-width: 992px) {
+  
+  h1 {
+      font-size: 5rem;
+      line-height: 5rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  section {
+    margin: 10em 0 20em;
+    padding: 1em 2em 3.5em;
+  }
+
+  .home-sub-text {
+    font-size: 1.7em;
+    margin: 0.1em 0 0 10em;
+  }
+
+  .nav-link {
+    display: block;
+    font-size: 1rem;
+    margin: 1em 0.6em;
+    padding: 0.5em 0.8em;
+  }
+
+  .dropdown-nav-button {
+    display: none;
+  }
+
+  .dropdown-nav {
+    display: none;
+  }
+                    
+}
